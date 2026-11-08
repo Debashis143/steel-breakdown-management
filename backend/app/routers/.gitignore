@@ -1,0 +1,26 @@
+
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local database
+*.db
+*.sqlite3
+
+# Environment variables and secrets
+.env
+.env.*
+
+# IDE files
+.vscode/
+
+# Node dependencies
+node_modules/
+dist/
+
+# Logs
+*.log
