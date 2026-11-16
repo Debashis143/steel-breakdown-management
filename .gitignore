@@ -1,0 +1,25 @@
+# Environment files
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Node dependencies
+node_modules/
+
+# Build files
+dist/
+
+# Cache directories
+cache/
+
+# IDE files
+.vscode/
+backend/steel_breakdown.db
+backend/steel_breakdown.db
