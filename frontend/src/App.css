@@ -1,0 +1,288 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  color: #1e293b;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #101c32;
+  color: white;
+  padding: 25px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 8px 35px;
+  color: #60a5fa;
+}
+
+.brand h2 {
+  font-size: 17px;
+  color: white;
+}
+
+.brand span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.menu-heading {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0 12px 15px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px;
+  background: transparent;
+  color: #cbd5e1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #2563eb;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px 10px 5px;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 85px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.topbar h2 {
+  font-size: 20px;
+}
+
+.topbar p {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-profile strong,
+.user-profile small {
+  display: block;
+}
+
+.user-profile strong {
+  font-size: 13px;
+}
+
+.user-profile small {
+  color: #64748b;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.content-area {
+  padding: 32px;
+}
+
+.welcome-section {
+  margin-bottom: 25px;
+}
+
+.welcome-section h1 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.welcome-section p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* KPI cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 23px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.stat-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+}
+
+.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.stat-card p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.stat-card h2 {
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+.stat-card span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Overview panel */
+.dashboard-panel {
+  background: white;
+  margin-top: 25px;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.dashboard-panel h3 {
+  margin-bottom: 12px;
+}
+
+.dashboard-panel p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Responsive layout */
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 75px;
+    padding: 20px 8px;
+  }
+
+  .brand {
+    justify-content: center;
+    padding: 5px 0 30px;
+  }
+
+  .brand div,
+  .menu-heading,
+  .menu-item span,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding: 13px 5px;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+
+  .content-area {
+    padding: 20px 12px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
